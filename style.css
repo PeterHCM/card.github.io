@@ -88,7 +88,7 @@ main.container {
 }
 
 #qr-website {
-	max-width: 80%;
+	max-width: 100%;
 	height: auto;	
 }
 
@@ -258,4 +258,5 @@ button.btn {
 button.btn:hover {
 	background-color: #006361;
 }
+
 
