@@ -39,9 +39,9 @@ fetch(vcfFile)
   .then(vcfData => {
     const data = parseVCF(vcfData);
 	const url = window.location.href;
-    updatePreview(data);
+    	updatePreview(data);
 	updateInput(data);	
-	generateQR(data,url);
+	generateQR(url);
 	UpdateNameCard();
   })
   .catch(error => {
@@ -226,4 +226,5 @@ function formatName(fullName) {
 	const lastName = parts.slice(0, -1).join(" ");
 	const firstName = parts.slice(-1).join(" ");
 	return `${lastName};${firstName};;;`;
+
 }
