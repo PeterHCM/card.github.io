@@ -1,0 +1,261 @@
+/* Cấu hình cơ bản */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background: #f5f5f5;
+	color: #333;
+}
+header {
+	background: white;
+	color: #006361;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center; /* Căn giữa logo theo chiều cao header */
+}
+
+header img {
+	height: auto;				 /* Để chiều cao tự động theo tỉ lệ */
+	width: 180px;				 /* Đặt chiều rộng mong muốn */
+	display: block;
+	margin-right: 15px;
+}
+
+h2 {
+	margin-top: 0;
+	color: #006361;
+}
+
+main.container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Cột trái (preview) và phải (form) */
+.preview-column, .form-column {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+	main.container {
+		flex-direction: column; /* Thêm dòng này để xếp dọc */
+	}
+	.preview-column, .form-column {
+		width: 100%;
+	}
+}
+
+/* Card frame + scale */
+.card-frame {
+	max-width: 100%;
+	margin: auto;
+}
+
+.card-scale {
+	width: 100%;
+	aspect-ratio: 1.75 / 1;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	background: white;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* Card Front */
+.card-front {
+	display: flex;
+	height: 100%;
+	border: 1px solid #999;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+.card-left {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;		 /* Căn giữa ngang */
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 105px;
+}
+
+#card-logo-preview {
+	max-width: 70%;
+	height: auto;	
+}
+
+#qr-website {
+	max-width: 80%;
+	height: auto;	
+}
+
+
+.card-right {
+	flex: 1;
+	padding: 20px 5px 20px 0px; /* trên, phải, dưới, trái */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 16px;
+}
+
+.top-info {
+	margin-bottom: 5px;	
+}
+
+.bottom-info div {
+	margin-bottom: 1px;
+}
+
+/* Card Back */
+.card-back {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 20px;
+	background-color: #ffffff;
+	border: 1px solid #999;
+	box-sizing: border-box;
+}
+
+/* SCAN ME cách điệu, chiếm 30% chiều ngang */
+.card-back {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 20px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+}
+
+/* Hàng ngang chứa SCAN ME và QR */
+.scan-qr-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 20px;
+}
+
+/* SCAN ME chiếm 30% chiều ngang */
+.scan-me {
+	width: 30%;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #006361;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-right: 10px;
+	animation: pulse 1.5s infinite;
+}
+
+/* QR vCard chiếm 70% chiều ngang */
+.qr-vcard {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.qr-vcard svg {
+	border: 2px solid #006361;
+	border-radius: 12px;
+	padding: 8px;
+	background-color: #f9f9f9;
+}
+
+
+@keyframes pulse {
+	0% { transform: scale(1); opacity: 1; }
+	50% { transform: scale(1.05); opacity: 0.8; }
+	100% { transform: scale(1); opacity: 1; }
+}
+
+
+.qr-border {
+	border: 5px solid #006361;
+	padding: 10px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.qr-border canvas {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Form */
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 10px;
+}
+
+.form-grid label {
+	font-weight: bold;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="email"],
+.form-grid input[type="tel"],
+.form-grid input[type="url"],
+.form-grid input[type="file"] {
+	width: 100%;
+	padding: 6px;
+	box-sizing: border-box;
+}
+.form-grid textarea{ /* Chiều cao cố định cho 2 dòng */
+	resize: none; /* Ngăn không cho người dùng thay đổi kích thước */
+	height:100%;
+	width: 100%;
+	padding: 6px;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	
+}
+/* Chân trang */
+footer {
+	background: #e06800;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 30px;
+}
+#preview-name,
+#preview-company {
+	font-weight: bold;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+#top-info{
+	font-weight: bold;
+	font-size: 18px;
+	padding-bottom: 6px;
+}
+button.btn {
+	background-color: #e06800;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	margin: 6px 4px;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+	background-color: #006361;
+}
+

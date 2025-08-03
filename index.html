@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<title>Danh Thiếp - CÔNG TY TNHH KỸ THUẬT VIỆT THẮNG LỢI</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	<header>		
+		<img src="vtl_logo.svg" alt="Logo" />
+		<h1>CÔNG TY TNHH KỸ THUẬT VIỆT THẮNG LỢI</h1>
+	</header>
+	<main class="container">
+		<section class="preview-column">
+		<h2>Danh thiếp</h2>
+		<div class="card-frame">
+			<div class="card-scale">
+				<div class="card-front">
+					<div class="card-left">
+						<div id="qr-website"></div>	
+						<img id="card-logo-preview" src="vtl_logo.svg" alt="Logo" />								  
+					</div>
+					<div class="card-right">
+						<div class="top-info">
+							<div id="preview-name">VTL TECH</div>
+							<div id="preview-title">Sales Dept.</div>
+							<div id="preview-phone">028-3811 0510</div>
+							<div id="preview-email">info@vtltech.com.vn</div>
+						</div>
+						<div class="bottom-info">
+							<div id="preview-company"><strong>VTL Tech Co., Ltd.</strong></div>
+							<div id="preview-tel">Tel: 028-3811 0510 / 11</div>
+							<div id="preview-fax">Fax: 028-3811 0512</div>
+							<div id="preview-website">https://vtltech.com.vn</div>
+							<div id="preview-address">03Brd floor, Scetpa Building, 19A Cong Hoa Street, Bay Hien Ward, Hồ Chí Minh City, Vietnam</div>
+						</div>
+					</div>
+				</div>				
+				<div class="card-back">
+					<div class="scan-qr-row">
+						<div class="scan-me">SCAN ME</div>
+						<div class="qr-vcard" id="qr-vcard"></div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</section>
+    <section class="form-column">
+		<h2 id="vcard_label">Thông tin cá nhân</h2>
+		<div id="form-input" class="form-grid">
+			<label>Họ tên</label><input type="text" id="name" value="VTL TECH">
+			<label>Chức danh</label><input type="text" id="title" value="Sales Dept.">
+			<label>Di động</label><input type="tel" id="phone" value="028-3811 0510">
+			<label>Email</label><input type="email" id="email" value="info@vtltech.com.vn">
+			<label>Tên công ty</label><input type="text" id="company" value="VTL Tech Co., Ltd.">
+			<label>Tel</label><input type="tel" id="tel" value="028-3811 0510 / 11">
+			<label>Fax</label><input type="tel" id="fax" value="028-3811 0512">
+			<label>Website</label><input type="url" id="website" value="https://vtltech.com.vn">
+			<label>Địa chỉ</label><textarea id="address" rows="3">03Brd floor, Scetpa Building</textarea>
+			<label></label><button id="updatenamecard-btn" class="btn">Cập nhật danh thiếp</button>
+			<label></label><button id="savenamecard-btn" class="btn" >Lưu danh thiếp</button>
+
+		</div>
+    </section>
+	</main>
+	<footer>
+		Copyright © 2025 CÔNG TY TNHH KỸ THUẬT VIỆT THẮNG LỢI – ĐKKD số: 0305557155
+	</footer>
+	<script src="vtl_qr_code_styling.js"></script>
+	<script src="vtl_qrcode.min.js"></script>
+	<script src="vtl_html2canvas.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
